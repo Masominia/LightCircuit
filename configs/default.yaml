@@ -1,0 +1,24 @@
+# Where the circuit library lives and how its results are stored.
+cases_dir: cases
+fast_every: 6            # in fast mode only every n-th case is run
+
+# Families of the report: a case belongs to the first prefix that matches its file name.
+families:
+  waveguides: [wg_, attenuator_]
+  splitter trees: [tree_]
+  couplers: [coupler_]
+  Mach-Zehnder: [mzi_, lattice_]
+  all-pass rings: [ring_allpass_, two_rings_]
+  add-drop rings: [ring_adddrop_, vernier_, ring_loaded_]
+  coupled rings: [crow_]
+  cavities and mirrors: [fabry_perot_, sagnac_, michelson, bragg_]
+  phased-array feeds: [opa_feed_]
+
+# Cases shown in the overview figure, with the ports to draw.
+gallery:
+  ring_adddrop_symmetric: [through, drop]
+  crow_4_rings: [through, drop]
+  mzi_dl_100: [bar, cross]
+  fabry_perot_r90: [in, out]
+  bragg_cavity: [in, out]
+  vernier_cascade: [out]
