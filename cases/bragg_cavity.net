@@ -1,0 +1,18 @@
+# Two gratings 100 um apart: sharp transmission lines inside the stop band.
+
+title Cavity between two Bragg gratings
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.54 1.56 40001
+
+comp g1 bragg length=150 kappa=0.01 bragg_lambda=1.55
+comp w waveguide length=100
+comp g2 bragg length=150 kappa=0.01 bragg_lambda=1.55
+link g1.2 w.1
+link w.2 g2.1
+port in g1.1
+port out g2.2
+
+expect lossless 1e-7
+expect reciprocal 1e-9
+expect max out 0 0.05
+expect deeper out -15
