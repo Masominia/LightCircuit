@@ -1,0 +1,15 @@
+# Peak reflectivity tanh^2(kappa L) = 0.9901 (-0.043 dB) at the Bragg wavelength.
+
+title Uniform Bragg grating, kappa L = 3
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.53 1.57 8001
+
+comp g bragg length=300 kappa=0.01 bragg_lambda=1.55
+port in g.1
+port out g.2
+
+expect lossless 1e-8
+expect reciprocal
+expect max in -0.0431 0.01
+expect center in peaks 1.55 0.02
+expect level out 1.55 -20.0586 0.01
