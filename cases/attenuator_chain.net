@@ -1,0 +1,16 @@
+# 1 + 2 + 3 dB.
+
+title Three attenuators in series
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 101
+
+comp a attenuator db=1
+comp b attenuator db=2
+comp c attenuator db=3
+link a.2 b.1
+link b.2 c.1
+port in a.1
+port out c.2
+
+expect level out 1.55 -6 1e-9
+expect reciprocal
