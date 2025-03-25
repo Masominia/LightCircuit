@@ -1,0 +1,17 @@
+# Power splits as kappa and 1 - kappa, and nothing is lost or reflected.
+
+title Directional coupler, 90% cross coupling
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 21
+
+comp c coupler kappa=0.9
+port in c.1
+port isolated c.2
+port bar c.3
+port cross c.4
+
+expect lossless
+expect reciprocal
+expect level cross 1.55 -0.45757491 1e-6
+expect level bar 1.55 -10.00000000 1e-6
+expect below isolated -200
