@@ -1,0 +1,38 @@
+# 3 rings coupled in series between two bus waveguides: a band-pass filter of order 3.
+# Without loss the pass band reaches full transmission and the four ports conserve power.
+
+title Coupled-resonator filter, 3 rings
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.545 1.555 8001
+
+comp c0 coupler kappa=0.3
+comp c1 coupler kappa=0.03
+comp c2 coupler kappa=0.03
+comp c3 coupler kappa=0.3
+comp w1a waveguide length=31.4159265359
+comp w1b waveguide length=31.4159265359
+comp w2a waveguide length=31.4159265359
+comp w2b waveguide length=31.4159265359
+comp w3a waveguide length=31.4159265359
+comp w3b waveguide length=31.4159265359
+link c0.4 w1a.1
+link w1a.2 c1.3
+link c1.1 w1b.1
+link w1b.2 c0.2
+link c1.2 w2a.1
+link w2a.2 c2.1
+link c2.3 w2b.1
+link w2b.2 c1.4
+link c2.4 w3a.1
+link w3a.2 c3.3
+link c3.1 w3b.1
+link w3b.2 c2.2
+port in c0.1
+port through c0.3
+port drop c3.2
+port add c3.4
+
+expect lossless 1e-7
+expect reciprocal 1e-7
+expect max drop 0 0.05
+expect below add -200
