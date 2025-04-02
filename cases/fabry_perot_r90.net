@@ -1,0 +1,20 @@
+# Mode spacing lambda^2 / (2 ng L) = 1.4301 nm, minimum transmission ((1 - R) / (1 + R))^2 = -25.58 dB.
+# Finesse pi sqrt(R) / (1 - R) = 29.8.
+
+title Fabry-Perot cavity, mirror reflectivity 90%
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.547 1.553 16001
+
+comp m1 reflector reflectivity=0.9
+comp w waveguide length=200
+comp m2 reflector reflectivity=0.9
+link m1.2 w.1
+link w.2 m2.1
+port in m1.1
+port out m2.2
+
+expect lossless 1e-8
+expect fsr out peaks 1.43006 0.005
+expect max out 0 0.01
+expect min out -25.5751 0.05
+expect fwhm out peaks 0.047872 0.01
