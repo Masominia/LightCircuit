@@ -1,0 +1,29 @@
+# Three couplers and two delays, the second twice the first: the building block of flat-top interleavers.
+
+title Two-stage lattice filter
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 8001
+
+comp c1 coupler kappa=0.5
+comp c2 coupler kappa=0.71
+comp c3 coupler kappa=0.08
+comp a1 waveguide length=100
+comp b1 waveguide length=200
+comp a2 waveguide length=100
+comp b2 waveguide length=300
+link c1.3 a1.1
+link c1.4 b1.1
+link a1.2 c2.1
+link b1.2 c2.2
+link c2.3 a2.1
+link c2.4 b2.1
+link a2.2 c3.1
+link b2.2 c3.2
+port in c1.1
+port in2 c1.2
+port bar c3.3
+port cross c3.4
+
+expect lossless
+expect reciprocal
+expect fsr bar dips 5.72024 0.01
