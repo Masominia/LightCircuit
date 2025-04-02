@@ -1,0 +1,22 @@
+# Light crosses the arm difference twice: fringe period lambda^2 / (2 ng dL) = 5.7202 nm.
+
+title Michelson interferometer, arm difference 50 um
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 8001
+
+comp c coupler kappa=0.5
+comp a waveguide length=100
+comp b waveguide length=150
+comp ma mirror
+comp mb mirror
+link c.3 a.1
+link a.2 ma.1
+link c.4 b.1
+link b.2 mb.1
+port in c.1
+port out c.2
+
+expect lossless
+expect fsr out dips 5.72024 0.005
+expect fsr in dips 5.72024 0.005
+expect max out 0 1e-3
