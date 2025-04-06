@@ -1,0 +1,24 @@
+# Fringe period lambda^2 / (ng dL) = 2.8601 nm.
+
+title Mach-Zehnder, arm difference 200 um
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 8001
+
+comp c1 coupler kappa=0.5
+comp c2 coupler kappa=0.5
+comp a waveguide length=100.0
+comp b waveguide length=300.0
+link c1.3 a.1
+link c1.4 b.1
+port in c1.1
+port in2 c1.2
+port bar c2.3
+port cross c2.4
+link a.2 c2.1
+link b.2 c2.2
+
+expect lossless
+expect fsr cross dips 2.86012 0.005
+expect fsr bar dips 2.86012 0.005
+expect max cross 0 1e-3
+expect deeper cross -40
