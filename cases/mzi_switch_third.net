@@ -1,0 +1,24 @@
+# A heater phase phi in one arm sends sin^2(phi/2) = 0.250 of the power to the bar port.
+
+title Mach-Zehnder switch, phase 0.333 pi
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 21
+
+comp c1 coupler kappa=0.5
+comp c2 coupler kappa=0.5
+comp a waveguide length=100.0
+comp b waveguide length=100.0
+comp h phase phi=1.047197551197
+link c1.3 a.1
+link c1.4 b.1
+port in c1.1
+port in2 c1.2
+port bar c2.3
+port cross c2.4
+link a.2 h.1
+link h.2 c2.1
+link b.2 c2.2
+
+expect lossless
+expect level bar 1.55 -6.02059991 1e-6
+expect level cross 1.55 -1.24938737 1e-6
