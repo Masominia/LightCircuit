@@ -1,0 +1,28 @@
+# Heaters set a phase ramp of 40 degrees per element.
+
+title Four-element feed with phase shifters
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 21
+
+comp s1 splitter
+comp s2 splitter
+comp s3 splitter
+comp t1 phase phi=0.000000000000
+comp t2 phase phi=0.698131700798
+comp t3 phase phi=1.396263401595
+comp t4 phase phi=2.094395102393
+link s1.2 s2.1
+link s1.3 s3.1
+link s2.2 t1.1
+link s2.3 t2.1
+link s3.2 t3.1
+link s3.3 t4.1
+port in s1.1
+port out1 t1.2
+port out2 t2.2
+port out3 t3.2
+port out4 t4.2
+
+expect uniform 1e-9
+expect phase_step 1.55 40 1e-6
+expect phase_step 1.52 40 1e-6
