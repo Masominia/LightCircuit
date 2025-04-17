@@ -1,0 +1,21 @@
+# The through port goes dark when t1 = t2 a: the input coupler must make up for the loss and the drop coupler together.
+
+title Add-drop ring at critical coupling
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=4
+sweep 1.545 1.555 16001
+
+comp c1 coupler kappa=0.05548179919
+comp c2 coupler kappa=0.05
+comp w1 waveguide length=31.4159265359
+comp w2 waveguide length=31.4159265359
+link c1.4 w1.1
+link w1.2 c2.4
+link c2.2 w2.1
+link w2.2 c1.2
+port in c1.1
+port through c1.3
+port drop c2.1
+port add c2.3
+
+expect passive
+expect deeper through -30
