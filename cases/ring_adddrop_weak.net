@@ -1,0 +1,26 @@
+# Drop peak k1^2 k2^2 a / (1 - t1 t2 a)^2 = -0.601 dB, through minimum -23.501 dB.
+# Width at half contrast 0.0627 nm, Q = 24708, free spectral range 9.104 nm.
+
+title Add-drop ring, radius 10 um, coupling 0.02 / 0.02
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=2
+sweep 1.545 1.555 16001
+
+comp c1 coupler kappa=0.02
+comp c2 coupler kappa=0.02
+comp w1 waveguide length=31.4159265359
+comp w2 waveguide length=31.4159265359
+link c1.4 w1.1
+link w1.2 c2.4
+link c2.2 w2.1
+link w2.2 c1.2
+port in c1.1
+port through c1.3
+port drop c2.1
+port add c2.3
+
+expect passive
+expect reciprocal
+expect below add -200
+expect max drop -0.6008 0.03
+expect min through -23.5012 0.1
+expect fwhm drop peaks 0.062733 0.01
