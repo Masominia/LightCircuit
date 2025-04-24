@@ -1,0 +1,15 @@
+# With no loss the ring is a pure phase filter: flat amplitude, all the structure is in the delay.
+
+title All-pass ring without loss
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.54 1.56 4001
+
+comp c coupler kappa=0.1
+comp w waveguide length=62.8318530718
+link c.4 w.1
+link w.2 c.2
+port in c.1
+port through c.3
+
+expect lossless 1e-8
+expect extinction through 0 1e-7
