@@ -1,0 +1,16 @@
+# When the coupler transmission equals the round-trip amplitude (kappa = 0.01436) the resonance goes to zero.
+
+title All-pass ring at critical coupling
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=5
+sweep 1.54 1.56 16001
+
+comp c coupler kappa=0.01436341643
+comp w waveguide length=125.6637061436
+link c.4 w.1
+link w.2 c.2
+port in c.1
+port through c.3
+
+expect passive
+expect deeper through -30
+expect fsr through dips 4.55202 0.005
