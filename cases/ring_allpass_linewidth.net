@@ -1,0 +1,17 @@
+# Width at half contrast of the Airy line with round-trip coefficient t a: 0.08060 nm, Q = 19231.
+# For a sharp resonance this tends to lambda^2 (1 - t a) / (pi ng L sqrt(t a)).
+
+title All-pass ring: linewidth and quality factor
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=3
+sweep 1.545 1.555 16001
+feature 0.5
+
+comp c coupler kappa=0.05
+comp w waveguide length=62.8318530718
+link c.4 w.1
+link w.2 c.2
+port in c.1
+port through c.3
+
+expect passive
+expect fwhm through dips 0.080600 0.01
