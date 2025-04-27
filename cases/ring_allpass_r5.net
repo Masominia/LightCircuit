@@ -1,0 +1,17 @@
+# Circumference 31.416 um, free spectral range lambda^2 / (ng L) = 18.2081 nm.
+
+title All-pass ring, radius 5 um
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=3
+sweep 1.5 1.6 16001
+feature 0.5
+
+comp c coupler kappa=0.05
+comp w waveguide length=31.4159265359
+link c.4 w.1
+link w.2 c.2
+port in c.1
+port through c.3
+
+expect passive
+expect reciprocal
+expect fsr through dips 18.20808 0.005
