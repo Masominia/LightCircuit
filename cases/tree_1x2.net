@@ -1,0 +1,17 @@
+# 1 levels of Y-branches: every output carries 1/2 of the power, -3.0103 dB.
+# This is the feed network of an optical phased array with uniform illumination.
+
+title 1x2 splitter tree
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 21
+
+comp s1 splitter
+port in s1.1
+port out1 s1.2
+port out2 s1.3
+
+expect passive
+expect uniform 1e-9
+expect level out1 1.55 -3.01029996 1e-6
+expect level out2 1.55 -3.01029996 1e-6
+expect phase_step 1.55 0 1e-9
