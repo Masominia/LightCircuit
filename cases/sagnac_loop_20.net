@@ -1,0 +1,16 @@
+# The two counter-propagating waves see the same loop, so the result does not depend on wavelength: reflection 4 kappa (1 - kappa) = 0.64.
+
+title Sagnac loop mirror, coupling 20%
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 201
+
+comp c coupler kappa=0.2
+comp w waveguide length=300
+link c.3 w.1
+link w.2 c.4
+port in c.1
+port out c.2
+
+expect lossless
+expect level in 1.55 -1.93820026 1e-6
+expect level out 1.55 -4.43697499 1e-6
