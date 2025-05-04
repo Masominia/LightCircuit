@@ -1,0 +1,23 @@
+# A 70/30 first split followed by even splits: 35, 35, 15 and 15 percent.
+# Uneven splits are how an array gets a tapered illumination and lower side lobes.
+
+title 1x4 tree with uneven first split
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 21
+
+comp s1 splitter ratio=0.7
+comp s2 splitter
+comp s3 splitter
+link s1.2 s2.1
+link s1.3 s3.1
+port in s1.1
+port out1 s2.2
+port out2 s2.3
+port out3 s3.2
+port out4 s3.3
+
+expect level out1 1.55 -4.55931956 1e-6
+expect level out2 1.55 -4.55931956 1e-6
+expect level out3 1.55 -8.23908741 1e-6
+expect level out4 1.55 -8.23908741 1e-6
+expect passive
