@@ -1,0 +1,32 @@
+# Three levels, so 0.6 dB on top of the 9.03 dB of splitting.
+
+title 1x8 tree, 0.2 dB excess loss per splitter
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.5 1.6 21
+
+comp s1 splitter excess_db=0.2
+comp s2 splitter excess_db=0.2
+comp s3 splitter excess_db=0.2
+comp s4 splitter excess_db=0.2
+comp s5 splitter excess_db=0.2
+comp s6 splitter excess_db=0.2
+comp s7 splitter excess_db=0.2
+link s1.2 s2.1
+link s1.3 s3.1
+link s2.2 s4.1
+link s2.3 s5.1
+link s3.2 s6.1
+link s3.3 s7.1
+port in s1.1
+port out1 s4.2
+port out2 s4.3
+port out3 s5.2
+port out4 s5.3
+port out5 s6.2
+port out6 s6.3
+port out7 s7.2
+port out8 s7.3
+
+expect uniform 1e-9
+expect level out3 1.55 -9.63089987 1e-6
+expect passive
