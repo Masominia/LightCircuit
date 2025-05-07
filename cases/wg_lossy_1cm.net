@@ -1,0 +1,13 @@
+# Propagation loss is the loss rate times the length.
+
+title Straight waveguide, 1 cm at 2 dB/cm
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=2
+sweep 1.53 1.57 4001
+
+comp w waveguide length=10000
+port in w.1
+port out w.2
+
+expect passive
+expect level out 1.55 -2 1e-9
+expect extinction out 0 1e-9
