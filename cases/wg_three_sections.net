@@ -1,0 +1,16 @@
+# Losses of sections in series add in decibels: 0.5 + 1.2 + 0.3 dB.
+
+title Three sections with different loss
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.53 1.57 4001
+
+comp a waveguide length=5000 loss_db_cm=1
+comp b waveguide length=4000 loss_db_cm=3
+comp c waveguide length=1000 loss_db_cm=3
+link a.2 b.1
+link b.2 c.1
+port in a.1
+port out c.2
+
+expect level out 1.55 -2 1e-9
+expect passive
