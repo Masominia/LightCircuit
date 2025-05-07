@@ -1,0 +1,35 @@
+# Each ring passes its own comb (9.10 and 8.28 nm). Both line up only every lambda^2 / (ng (L2 - L1)) = 91.0 nm.
+
+title Vernier filter: two rings of 10 and 11 um in cascade
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.45 1.65 40001
+
+comp c1 coupler kappa=0.1
+comp c2 coupler kappa=0.1
+comp w1 waveguide length=31.4159265359
+comp w2 waveguide length=31.4159265359
+comp d1 coupler kappa=0.1
+comp d2 coupler kappa=0.1
+comp v1 waveguide length=34.5575191895
+comp v2 waveguide length=34.5575191895
+comp bus waveguide length=50
+link c1.4 w1.1
+link w1.2 c2.4
+link c2.2 w2.1
+link w2.2 c1.2
+link c2.1 bus.1
+link bus.2 d1.1
+link d1.4 v1.1
+link v1.2 d2.4
+link d2.2 v2.1
+link v2.2 d1.2
+port in c1.1
+port through c1.3
+port out d2.1
+port through2 d1.3
+port add2 d2.3
+port add1 c2.3
+
+expect lossless 1e-7
+expect below out 0.0001
+expect max out 0 0.3
