@@ -1,0 +1,14 @@
+# Group delay of a plain waveguide: tau = ng L / c.
+
+title Straight waveguide, 1 mm, lossless
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=0
+sweep 1.53 1.57 4001
+
+comp w waveguide length=1000
+port in w.1
+port out w.2
+
+expect lossless
+expect reciprocal
+expect level out 1.55 0 1e-9
+expect delay out 1.55 14.009692 1e-5
