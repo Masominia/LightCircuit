@@ -1,0 +1,12 @@
+# A long delay line: 7.5 dB of loss and ng L / c of delay.
+
+title Spiral delay line, 5 cm at 1.5 dB/cm
+medium lambda0=1.55 neff=2.4 ng=4.2 loss_db_cm=1.5
+sweep 1.5499 1.5501 2001
+
+comp w waveguide length=50000
+port in w.1
+port out w.2
+
+expect level out 1.55 -7.5 1e-9
+expect delay out 1.55 700.48460 1e-4
