@@ -1,0 +1,47 @@
+{
+ "case": "attenuator_chain",
+ "title": "Three attenuators in series",
+ "notes": [
+  "1 + 2 + 3 dB."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 3,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 101,
+ "unitarity_defect": 0.7488114,
+ "reciprocity_defect": 0.0,
+ "max_power": 0.251188643151,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out": {
+   "max_db": -6.0,
+   "min_db": -6.0,
+   "center_db": -6.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "level out 1.55 -6 1e-9",
+   "status": "PASS",
+   "detail": "-6.0000 dB, expected -6.0000, off by -8.88e-16"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 0.00e+00, tolerance 1.0e-09"
+  }
+ ]
+}
