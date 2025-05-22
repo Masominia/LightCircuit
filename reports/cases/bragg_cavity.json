@@ -1,0 +1,66 @@
+{
+ "case": "bragg_cavity",
+ "title": "Cavity between two Bragg gratings",
+ "notes": [
+  "Two gratings 100 um apart: sharp transmission lines inside the stop band."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 3,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 40001,
+ "unitarity_defect": 1.776357e-15,
+ "reciprocity_defect": 5.028664e-16,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -0.063541,
+   "min_db": -137.622193,
+   "center_db": -0.063768,
+   "dips": 14.0,
+   "dips_fsr_nm": 1.491274,
+   "dips_lambda_um": 1.54788998,
+   "peaks": 13.0,
+   "peaks_fsr_nm": 1.542918,
+   "peaks_lambda_um": 1.55004939,
+   "peaks_fwhm_nm": 3.230178,
+   "peaks_q": 479.9
+  },
+  "out": {
+   "max_db": -0.0,
+   "min_db": -18.379002,
+   "center_db": -18.36364,
+   "dips": 1.0,
+   "dips_lambda_um": 1.55004939,
+   "dips_fwhm_nm": 3.230178,
+   "dips_q": 479.9,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless 1e-7",
+   "status": "PASS",
+   "detail": "defect 1.78e-15, tolerance 1.0e-07"
+  },
+  {
+   "check": "reciprocal 1e-9",
+   "status": "PASS",
+   "detail": "defect 5.03e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "max out 0 0.05",
+   "status": "PASS",
+   "detail": "-0.0000 dB, expected 0.0000, off by -7.28e-14"
+  },
+  {
+   "check": "deeper out -15",
+   "status": "PASS",
+   "detail": "minimum -18.379 dB, required below -15.000"
+  }
+ ]
+}
