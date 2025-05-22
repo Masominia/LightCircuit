@@ -1,0 +1,71 @@
+{
+ "case": "bragg_medium",
+ "title": "Uniform Bragg grating, kappa L = 1",
+ "notes": [
+  "Peak reflectivity tanh^2(kappa L) = 0.5800 (-2.366 dB) at the Bragg wavelength."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 1,
+ "component_ports": 2,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 8.881784e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -2.365528,
+   "min_db": -103.950508,
+   "center_db": -2.365528,
+   "dips": 27.0,
+   "dips_fsr_nm": 1.484297,
+   "dips_lambda_um": 1.54850017,
+   "peaks": 27.0,
+   "peaks_fsr_nm": 1.484879,
+   "peaks_lambda_um": 1.55,
+   "peaks_fwhm_nm": 1.690517,
+   "peaks_q": 916.9
+  },
+  "out": {
+   "max_db": -0.0,
+   "min_db": -3.767772,
+   "center_db": -3.767772,
+   "dips": 1.0,
+   "dips_lambda_um": 1.55,
+   "dips_fwhm_nm": 1.690517,
+   "dips_q": 916.9,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless 1e-8",
+   "status": "PASS",
+   "detail": "defect 8.88e-16, tolerance 1.0e-08"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 0.00e+00, tolerance 1.0e-09"
+  },
+  {
+   "check": "max in -2.3655 0.01",
+   "status": "PASS",
+   "detail": "-2.3655 dB, expected -2.3655, off by -2.79e-05"
+  },
+  {
+   "check": "center in peaks 1.55 0.02",
+   "status": "PASS",
+   "detail": "1.550000 um, expected 1.550000, off by 0.0000 nm"
+  },
+  {
+   "check": "level out 1.55 -3.7678 0.01",
+   "status": "PASS",
+   "detail": "-3.7678 dB, expected -3.7678, off by 2.76e-05"
+  }
+ ]
+}
