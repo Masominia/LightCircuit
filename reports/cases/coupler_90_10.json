@@ -1,0 +1,78 @@
+{
+ "case": "coupler_90_10",
+ "title": "Directional coupler, 90% cross coupling",
+ "notes": [
+  "Power splits as kappa and 1 - kappa, and nothing is lost or reflected."
+ ],
+ "ports": [
+  "in",
+  "isolated",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 1,
+ "component_ports": 4,
+ "open_ports": 0,
+ "points": 21,
+ "unitarity_defect": 1.110223e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "isolated": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -10.0,
+   "min_db": -10.0,
+   "center_db": -10.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "cross": {
+   "max_db": -0.457575,
+   "min_db": -0.457575,
+   "center_db": -0.457575,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 1.11e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 0.00e+00, tolerance 1.0e-09"
+  },
+  {
+   "check": "level cross 1.55 -0.45757491 1e-6",
+   "status": "PASS",
+   "detail": "-0.4576 dB, expected -0.4576, off by 4.39e-09"
+  },
+  {
+   "check": "level bar 1.55 -10.00000000 1e-6",
+   "status": "PASS",
+   "detail": "-10.0000 dB, expected -10.0000, off by -1.78e-15"
+  },
+  {
+   "check": "below isolated -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  }
+ ]
+}
