@@ -1,0 +1,68 @@
+{
+ "case": "coupler_pair_full_cross",
+ "title": "Two 3 dB couplers back to back",
+ "notes": [
+  "Two half couplers in a row are one full coupler: everything crosses over."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 2,
+ "component_ports": 8,
+ "open_ports": 0,
+ "points": 21,
+ "unitarity_defect": 4.440892e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "cross": {
+   "max_db": 0.0,
+   "min_db": 0.0,
+   "center_db": 0.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 4.44e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "level cross 1.55 0 1e-9",
+   "status": "PASS",
+   "detail": "0.0000 dB, expected 0.0000, off by 1.93e-15"
+  },
+  {
+   "check": "below bar -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  }
+ ]
+}
