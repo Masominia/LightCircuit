@@ -1,0 +1,83 @@
+{
+ "case": "crow_3_rings_lossy",
+ "title": "Three coupled rings with loss",
+ "notes": [
+  "The same filter with 3 dB/cm: the pass band no longer reaches full transmission."
+ ],
+ "ports": [
+  "in",
+  "through",
+  "drop",
+  "add"
+ ],
+ "excite": "in",
+ "components": 10,
+ "component_ports": 28,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 0.05716961,
+ "reciprocity_defect": 1.952383e-15,
+ "max_power": 0.999611120406,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.001697,
+   "min_db": -44.788286,
+   "center_db": -0.002792,
+   "dips": 3.0,
+   "dips_fsr_nm": 0.247043,
+   "dips_lambda_um": 1.55237969,
+   "peaks": 2.0,
+   "peaks_fsr_nm": 0.284941,
+   "peaks_lambda_um": 1.55248423,
+   "peaks_fwhm_nm": 0.129055,
+   "peaks_q": 12029.6
+  },
+  "drop": {
+   "max_db": -0.162112,
+   "min_db": -57.36683,
+   "center_db": -51.065816,
+   "dips": 1.0,
+   "dips_lambda_um": 1.54807262,
+   "peaks": 1.0,
+   "peaks_lambda_um": 1.55262669,
+   "peaks_fwhm_nm": 0.766888,
+   "peaks_q": 2024.6
+  },
+  "add": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.999611120"
+  },
+  {
+   "check": "reciprocal 1e-7",
+   "status": "PASS",
+   "detail": "defect 1.95e-15, tolerance 1.0e-07"
+  },
+  {
+   "check": "below drop -0.05",
+   "status": "PASS",
+   "detail": "maximum -0.1621 dB, bound -0.0500"
+  },
+  {
+   "check": "below add -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  }
+ ]
+}
