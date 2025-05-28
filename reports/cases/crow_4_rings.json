@@ -1,0 +1,84 @@
+{
+ "case": "crow_4_rings",
+ "title": "Coupled-resonator filter, 4 rings",
+ "notes": [
+  "4 rings coupled in series between two bus waveguides: a band-pass filter of order 4.",
+  "Without loss the pass band reaches full transmission and the four ports conserve power."
+ ],
+ "ports": [
+  "in",
+  "through",
+  "drop",
+  "add"
+ ],
+ "excite": "in",
+ "components": 13,
+ "component_ports": 36,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 1.132427e-14,
+ "reciprocity_defect": 3.377068e-15,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.0,
+   "min_db": -51.565122,
+   "center_db": -0.0,
+   "dips": 3.0,
+   "dips_fsr_nm": 0.355451,
+   "dips_lambda_um": 1.55227133,
+   "peaks": 2.0,
+   "peaks_fsr_nm": 0.499273,
+   "peaks_lambda_um": 1.55237709,
+   "peaks_fwhm_nm": 0.154305,
+   "peaks_q": 10060.4
+  },
+  "drop": {
+   "max_db": -3e-05,
+   "min_db": -78.54862,
+   "center_db": -70.117374,
+   "dips": 1.0,
+   "dips_lambda_um": 1.54807262,
+   "peaks": 1.0,
+   "peaks_lambda_um": 1.55227151,
+   "peaks_fwhm_nm": 0.835423,
+   "peaks_q": 1858.1
+  },
+  "add": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless 1e-7",
+   "status": "PASS",
+   "detail": "defect 1.13e-14, tolerance 1.0e-07"
+  },
+  {
+   "check": "reciprocal 1e-7",
+   "status": "PASS",
+   "detail": "defect 3.38e-15, tolerance 1.0e-07"
+  },
+  {
+   "check": "max drop 0 0.05",
+   "status": "PASS",
+   "detail": "-0.0000 dB, expected 0.0000, off by -3.03e-05"
+  },
+  {
+   "check": "below add -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  }
+ ]
+}
