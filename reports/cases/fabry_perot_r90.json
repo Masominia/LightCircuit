@@ -1,0 +1,79 @@
+{
+ "case": "fabry_perot_r90",
+ "title": "Fabry-Perot cavity, mirror reflectivity 90%",
+ "notes": [
+  "Mode spacing lambda^2 / (2 ng L) = 1.4301 nm, minimum transmission ((1 - R) / (1 + R))^2 = -25.58 dB.",
+  "Finesse pi sqrt(R) / (1 - R) = 29.8."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 3,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 6.328271e-15,
+ "reciprocity_defect": 4.742875e-16,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -0.012047,
+   "min_db": -53.659728,
+   "center_db": -0.014941,
+   "dips": 4.0,
+   "dips_fsr_nm": 1.429646,
+   "dips_lambda_um": 1.55050766,
+   "dips_fwhm_nm": 0.047906,
+   "dips_q": 32365.5,
+   "peaks": 3.0,
+   "peaks_fsr_nm": 1.429678,
+   "peaks_lambda_um": 1.54979244,
+   "peaks_fwhm_nm": 1.381817,
+   "peaks_q": 1121.6
+  },
+  "out": {
+   "max_db": -1.9e-05,
+   "min_db": -25.575071,
+   "center_db": -24.641602,
+   "dips": 3.0,
+   "dips_fsr_nm": 1.429678,
+   "dips_lambda_um": 1.54979244,
+   "dips_fwhm_nm": 1.381817,
+   "dips_q": 1121.6,
+   "peaks": 4.0,
+   "peaks_fsr_nm": 1.429679,
+   "peaks_lambda_um": 1.55050761,
+   "peaks_fwhm_nm": 0.047906,
+   "peaks_q": 32365.5
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless 1e-8",
+   "status": "PASS",
+   "detail": "defect 6.33e-15, tolerance 1.0e-08"
+  },
+  {
+   "check": "fsr out peaks 1.43006 0.005",
+   "status": "PASS",
+   "detail": "1.42968 nm, expected 1.43006, relative error -2.66e-04"
+  },
+  {
+   "check": "max out 0 0.01",
+   "status": "PASS",
+   "detail": "-0.0000 dB, expected 0.0000, off by -1.87e-05"
+  },
+  {
+   "check": "min out -25.5751 0.05",
+   "status": "PASS",
+   "detail": "-25.5751 dB, expected -25.5751, off by 2.86e-05"
+  },
+  {
+   "check": "fwhm out peaks 0.047872 0.01",
+   "status": "PASS",
+   "detail": "0.04791 nm, expected 0.04787, relative error 7.14e-04"
+  }
+ ]
+}
