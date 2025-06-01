@@ -1,0 +1,84 @@
+{
+ "case": "lattice_two_stage",
+ "title": "Two-stage lattice filter",
+ "notes": [
+  "Three couplers and two delays, the second twice the first: the building block of flat-top interleavers."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 7,
+ "component_ports": 20,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 8.881784e-16,
+ "reciprocity_defect": 4.742875e-16,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -1.150818,
+   "min_db": -6.330487,
+   "center_db": -3.200822,
+   "dips": 17.0,
+   "dips_fsr_nm": 5.718413,
+   "dips_lambda_um": 1.54907793,
+   "dips_fwhm_nm": 2.131399,
+   "dips_q": 726.8,
+   "peaks": 16.0,
+   "peaks_fsr_nm": 5.71781,
+   "peaks_lambda_um": 1.55193992,
+   "peaks_fwhm_nm": 2.139321,
+   "peaks_q": 725.4
+  },
+  "cross": {
+   "max_db": -1.150818,
+   "min_db": -6.330487,
+   "center_db": -2.827786,
+   "dips": 17.0,
+   "dips_fsr_nm": 5.697362,
+   "dips_lambda_um": 1.55193992,
+   "dips_fwhm_nm": 2.139321,
+   "dips_q": 725.4,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.718413,
+   "peaks_lambda_um": 1.54907793,
+   "peaks_fwhm_nm": 2.131399,
+   "peaks_q": 726.8
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 8.88e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 4.74e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "fsr bar dips 5.72024 0.01",
+   "status": "PASS",
+   "detail": "5.71841 nm, expected 5.72024, relative error -3.19e-04"
+  }
+ ]
+}
