@@ -1,0 +1,73 @@
+{
+ "case": "michelson",
+ "title": "Michelson interferometer, arm difference 50 um",
+ "notes": [
+  "Light crosses the arm difference twice: fringe period lambda^2 / (2 ng dL) = 5.7202 nm."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 5,
+ "component_ports": 10,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 8.881784e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -0.0,
+   "min_db": -101.779597,
+   "center_db": -6.279759,
+   "dips": 17.0,
+   "dips_fsr_nm": 5.718497,
+   "dips_lambda_um": 1.54907605,
+   "dips_fwhm_nm": 2.856723,
+   "dips_q": 542.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.697362,
+   "peaks_lambda_um": 1.55193993,
+   "peaks_fwhm_nm": 2.867288,
+   "peaks_q": 541.3
+  },
+  "out": {
+   "max_db": -0.0,
+   "min_db": -81.243993,
+   "center_db": -1.166327,
+   "dips": 18.0,
+   "dips_fsr_nm": 5.719091,
+   "dips_lambda_um": 1.55193826,
+   "dips_fwhm_nm": 2.867288,
+   "dips_q": 541.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.718413,
+   "peaks_lambda_um": 1.54907793,
+   "peaks_fwhm_nm": 2.856723,
+   "peaks_q": 542.3
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 8.88e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "fsr out dips 5.72024 0.005",
+   "status": "PASS",
+   "detail": "5.71909 nm, expected 5.72024, relative error -2.01e-04"
+  },
+  {
+   "check": "fsr in dips 5.72024 0.005",
+   "status": "PASS",
+   "detail": "5.71850 nm, expected 5.72024, relative error -3.05e-04"
+  },
+  {
+   "check": "max out 0 1e-3",
+   "status": "PASS",
+   "detail": "-0.0000 dB, expected 0.0000, off by -2.88e-10"
+  }
+ ]
+}
