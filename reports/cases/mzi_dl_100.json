@@ -1,0 +1,94 @@
+{
+ "case": "mzi_dl_100",
+ "title": "Mach-Zehnder, arm difference 100 um",
+ "notes": [
+  "Fringe period lambda^2 / (ng dL) = 5.7202 nm."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 4,
+ "component_ports": 12,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 6.661338e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -0.0,
+   "min_db": -101.779597,
+   "center_db": -6.279759,
+   "dips": 17.0,
+   "dips_fsr_nm": 5.718497,
+   "dips_lambda_um": 1.54907605,
+   "dips_fwhm_nm": 2.856723,
+   "dips_q": 542.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.697362,
+   "peaks_lambda_um": 1.55193993,
+   "peaks_fwhm_nm": 2.867288,
+   "peaks_q": 541.3
+  },
+  "cross": {
+   "max_db": -0.0,
+   "min_db": -81.243993,
+   "center_db": -1.166327,
+   "dips": 18.0,
+   "dips_fsr_nm": 5.719091,
+   "dips_lambda_um": 1.55193826,
+   "dips_fwhm_nm": 2.867288,
+   "dips_q": 541.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.718413,
+   "peaks_lambda_um": 1.54907793,
+   "peaks_fwhm_nm": 2.856723,
+   "peaks_q": 542.3
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 6.66e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "fsr cross dips 5.72024 0.005",
+   "status": "PASS",
+   "detail": "5.71909 nm, expected 5.72024, relative error -2.01e-04"
+  },
+  {
+   "check": "fsr bar dips 5.72024 0.005",
+   "status": "PASS",
+   "detail": "5.71850 nm, expected 5.72024, relative error -3.05e-04"
+  },
+  {
+   "check": "max cross 0 1e-3",
+   "status": "PASS",
+   "detail": "-0.0000 dB, expected 0.0000, off by -2.88e-10"
+  },
+  {
+   "check": "deeper cross -40",
+   "status": "PASS",
+   "detail": "minimum -81.244 dB, required below -40.000"
+  }
+ ]
+}
