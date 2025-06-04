@@ -1,0 +1,73 @@
+{
+ "case": "mzi_balanced",
+ "title": "Balanced Mach-Zehnder",
+ "notes": [
+  "Equal arms: all the light crosses, at every wavelength."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 4,
+ "component_ports": 12,
+ "open_ports": 0,
+ "points": 201,
+ "unitarity_defect": 6.661338e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "cross": {
+   "max_db": 0.0,
+   "min_db": -0.0,
+   "center_db": 0.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 6.66e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "level cross 1.55 0 1e-9",
+   "status": "PASS",
+   "detail": "0.0000 dB, expected 0.0000, off by 1.93e-15"
+  },
+  {
+   "check": "below bar -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  },
+  {
+   "check": "extinction cross 0 1e-9",
+   "status": "PASS",
+   "detail": "0.000 dB, expected 0.000"
+  }
+ ]
+}
