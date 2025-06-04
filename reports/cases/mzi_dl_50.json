@@ -1,0 +1,94 @@
+{
+ "case": "mzi_dl_50",
+ "title": "Mach-Zehnder, arm difference 50 um",
+ "notes": [
+  "Fringe period lambda^2 / (ng dL) = 11.4405 nm."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 4,
+ "component_ports": 12,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 6.661338e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -0.0,
+   "min_db": -107.800197,
+   "center_db": -0.281801,
+   "dips": 8.0,
+   "dips_fsr_nm": 11.434938,
+   "dips_lambda_um": 1.5548125,
+   "dips_fwhm_nm": 5.755833,
+   "dips_q": 270.1,
+   "peaks": 9.0,
+   "peaks_fsr_nm": 11.436826,
+   "peaks_lambda_um": 1.54907793,
+   "peaks_fwhm_nm": 5.713456,
+   "peaks_q": 271.1
+  },
+  "cross": {
+   "max_db": -0.0,
+   "min_db": -95.56326,
+   "center_db": -12.018558,
+   "dips": 9.0,
+   "dips_fsr_nm": 11.436995,
+   "dips_lambda_um": 1.54907605,
+   "dips_fwhm_nm": 5.713456,
+   "dips_q": 271.1,
+   "peaks": 8.0,
+   "peaks_fsr_nm": 11.434491,
+   "peaks_lambda_um": 1.55481252,
+   "peaks_fwhm_nm": 5.755833,
+   "peaks_q": 270.1
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 6.66e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "fsr cross dips 11.44048 0.005",
+   "status": "PASS",
+   "detail": "11.43699 nm, expected 11.44048, relative error -3.05e-04"
+  },
+  {
+   "check": "fsr bar dips 11.44048 0.005",
+   "status": "PASS",
+   "detail": "11.43494 nm, expected 11.44048, relative error -4.84e-04"
+  },
+  {
+   "check": "max cross 0 1e-3",
+   "status": "PASS",
+   "detail": "-0.0000 dB, expected 0.0000, off by -7.21e-11"
+  },
+  {
+   "check": "deeper cross -40",
+   "status": "PASS",
+   "detail": "minimum -95.563 dB, required below -40.000"
+  }
+ ]
+}
