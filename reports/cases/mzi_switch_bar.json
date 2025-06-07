@@ -1,0 +1,68 @@
+{
+ "case": "mzi_switch_bar",
+ "title": "Mach-Zehnder switch, phase 1.000 pi",
+ "notes": [
+  "A heater phase phi in one arm sends sin^2(phi/2) = 1.000 of the power to the bar port."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 5,
+ "component_ports": 14,
+ "open_ports": 0,
+ "points": 21,
+ "unitarity_defect": 4.440892e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": 0.0,
+   "min_db": 0.0,
+   "center_db": 0.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "cross": {
+   "max_db": -259.704441,
+   "min_db": -259.713599,
+   "center_db": -259.706902,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 4.44e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "level bar 1.55 0.00000000 1e-6",
+   "status": "PASS",
+   "detail": "0.0000 dB, expected 0.0000, off by 9.64e-16"
+  },
+  {
+   "check": "below cross -200",
+   "status": "PASS",
+   "detail": "maximum -259.7044 dB, bound -200.0000"
+  }
+ ]
+}
