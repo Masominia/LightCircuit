@@ -1,0 +1,90 @@
+{
+ "case": "mzi_unbalanced_couplers",
+ "title": "Mach-Zehnder with 40/60 couplers",
+ "notes": [
+  "With imperfect couplers the bar port no longer goes dark: its minimum is (t1 t2 - k1 k2)^2 = 0.04, 13.98 dB below its maximum.",
+  "The cross port still reaches zero."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 4,
+ "component_ports": 12,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 4.440892e-16,
+ "reciprocity_defect": 2.482534e-16,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -0.0,
+   "min_db": -13.9794,
+   "center_db": -5.749596,
+   "dips": 17.0,
+   "dips_fsr_nm": 5.718413,
+   "dips_lambda_um": 1.54907793,
+   "dips_fwhm_nm": 2.856723,
+   "dips_q": 542.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.697362,
+   "peaks_lambda_um": 1.55193993,
+   "peaks_fwhm_nm": 2.867288,
+   "peaks_q": 541.3
+  },
+  "cross": {
+   "max_db": -0.177288,
+   "min_db": -81.421281,
+   "center_db": -1.343615,
+   "dips": 18.0,
+   "dips_fsr_nm": 5.719091,
+   "dips_lambda_um": 1.55193826,
+   "dips_fwhm_nm": 2.867288,
+   "dips_q": 541.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.718413,
+   "peaks_lambda_um": 1.54907793,
+   "peaks_fwhm_nm": 2.856723,
+   "peaks_q": 542.3
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 4.44e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "extinction bar 13.9794 0.01",
+   "status": "PASS",
+   "detail": "13.979 dB, expected 13.979"
+  },
+  {
+   "check": "deeper cross -40",
+   "status": "PASS",
+   "detail": "minimum -81.421 dB, required below -40.000"
+  },
+  {
+   "check": "max cross -0.17729 1e-3",
+   "status": "PASS",
+   "detail": "-0.1773 dB, expected -0.1773, off by 2.33e-06"
+  }
+ ]
+}
