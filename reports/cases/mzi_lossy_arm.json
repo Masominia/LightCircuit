@@ -1,0 +1,89 @@
+{
+ "case": "mzi_lossy_arm",
+ "title": "Mach-Zehnder with 3 dB of loss in one arm",
+ "notes": [
+  "Unequal arm amplitudes limit the extinction: maximum (1 + a)^2 / 4, minimum (1 - a)^2 / 4 with a = 0.708."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 5,
+ "component_ports": 14,
+ "open_ports": 0,
+ "points": 8001,
+ "unitarity_defect": 0.2494064,
+ "reciprocity_defect": 2.22153e-16,
+ "max_power": 0.750593616814,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -1.371118,
+   "min_db": -16.71133,
+   "center_db": -7.257084,
+   "dips": 17.0,
+   "dips_fsr_nm": 5.718413,
+   "dips_lambda_um": 1.54907793,
+   "dips_fwhm_nm": 2.856723,
+   "dips_q": 542.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.697362,
+   "peaks_lambda_um": 1.55193993,
+   "peaks_fwhm_nm": 2.867288,
+   "peaks_q": 541.3
+  },
+  "cross": {
+   "max_db": -1.371118,
+   "min_db": -16.711329,
+   "center_db": -2.498499,
+   "dips": 18.0,
+   "dips_fsr_nm": 5.719055,
+   "dips_lambda_um": 1.55193992,
+   "dips_fwhm_nm": 2.867288,
+   "dips_q": 541.3,
+   "peaks": 17.0,
+   "peaks_fsr_nm": 5.718413,
+   "peaks_lambda_um": 1.54907793,
+   "peaks_fwhm_nm": 2.856723,
+   "peaks_q": 542.3
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.750593617"
+  },
+  {
+   "check": "max cross -1.37112 1e-3",
+   "status": "PASS",
+   "detail": "-1.3711 dB, expected -1.3711, off by 1.70e-06"
+  },
+  {
+   "check": "min cross -16.71133 1e-2",
+   "status": "PASS",
+   "detail": "-16.7113 dB, expected -16.7113, off by 7.57e-07"
+  },
+  {
+   "check": "extinction bar 15.3402 0.02",
+   "status": "PASS",
+   "detail": "15.340 dB, expected 15.340"
+  }
+ ]
+}
