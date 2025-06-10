@@ -1,0 +1,182 @@
+{
+ "case": "opa_feed_1x16_equal",
+ "title": "Equal-path feed for a 16-element array",
+ "notes": [
+  "All paths have the same length: equal power and equal phase at every wavelength, the starting point for phase-shifter steering."
+ ],
+ "ports": [
+  "in",
+  "out1",
+  "out2",
+  "out3",
+  "out4",
+  "out5",
+  "out6",
+  "out7",
+  "out8",
+  "out9",
+  "out10",
+  "out11",
+  "out12",
+  "out13",
+  "out14",
+  "out15",
+  "out16"
+ ],
+ "excite": "in",
+ "components": 31,
+ "component_ports": 77,
+ "open_ports": 0,
+ "points": 61,
+ "unitarity_defect": 0.9375,
+ "reciprocity_defect": 5.551115e-17,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out1": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out2": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out3": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out4": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out5": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out6": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out7": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out8": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out9": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out10": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out11": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out12": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out13": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out14": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out15": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out16": {
+   "max_db": -12.0412,
+   "min_db": -12.0412,
+   "center_db": -12.0412,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 1.000000000"
+  },
+  {
+   "check": "uniform 1e-9",
+   "status": "PASS",
+   "detail": "outputs between -12.0412 and -12.0412 dB"
+  },
+  {
+   "check": "phase_step 1.55 0 1e-6",
+   "status": "PASS",
+   "detail": "largest deviation 0.0000 degrees from a step of 0.000 over 15 steps"
+  },
+  {
+   "check": "phase_step 1.58 0 1e-6",
+   "status": "PASS",
+   "detail": "largest deviation 0.0000 degrees from a step of 0.000 over 15 steps"
+  },
+  {
+   "check": "level out9 1.55 -12.04119983 1e-6",
+   "status": "PASS",
+   "detail": "-12.0412 dB, expected -12.0412, off by 3.44e-09"
+  }
+ ]
+}
