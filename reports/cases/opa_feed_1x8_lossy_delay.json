@@ -1,0 +1,108 @@
+{
+ "case": "opa_feed_1x8_lossy_delay",
+ "title": "Delay-line feed with propagation loss",
+ "notes": [
+  "With 3 dB/cm the longer outputs are weaker: the illumination is no longer uniform, by 3 dB/cm times 140 um = 0.042 dB end to end."
+ ],
+ "ports": [
+  "in",
+  "out1",
+  "out2",
+  "out3",
+  "out4",
+  "out5",
+  "out6",
+  "out7",
+  "out8"
+ ],
+ "excite": "in",
+ "components": 15,
+ "component_ports": 37,
+ "open_ports": 0,
+ "points": 201,
+ "unitarity_defect": 0.8770552,
+ "reciprocity_defect": 7.850462e-17,
+ "max_power": 0.988330449907,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out1": {
+   "max_db": -9.0609,
+   "min_db": -9.0609,
+   "center_db": -9.0609,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out2": {
+   "max_db": -9.0669,
+   "min_db": -9.0669,
+   "center_db": -9.0669,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out3": {
+   "max_db": -9.0729,
+   "min_db": -9.0729,
+   "center_db": -9.0729,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out4": {
+   "max_db": -9.0789,
+   "min_db": -9.0789,
+   "center_db": -9.0789,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out5": {
+   "max_db": -9.0849,
+   "min_db": -9.0849,
+   "center_db": -9.0849,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out6": {
+   "max_db": -9.0909,
+   "min_db": -9.0909,
+   "center_db": -9.0909,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out7": {
+   "max_db": -9.0969,
+   "min_db": -9.0969,
+   "center_db": -9.0969,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out8": {
+   "max_db": -9.1029,
+   "min_db": -9.1029,
+   "center_db": -9.1029,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.988330450"
+  },
+  {
+   "check": "level out1 1.55 -9.06089987 1e-6",
+   "status": "PASS",
+   "detail": "-9.0609 dB, expected -9.0609, off by 8.06e-11"
+  },
+  {
+   "check": "level out8 1.55 -9.10289987 1e-6",
+   "status": "PASS",
+   "detail": "-9.1029 dB, expected -9.1029, off by 8.06e-11"
+  }
+ ]
+}
