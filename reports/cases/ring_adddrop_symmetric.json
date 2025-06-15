@@ -1,0 +1,105 @@
+{
+ "case": "ring_adddrop_symmetric",
+ "title": "Add-drop ring, radius 10 um, coupling 0.1 / 0.1",
+ "notes": [
+  "Drop peak k1^2 k2^2 a / (1 - t1 t2 a)^2 = -0.119 dB, through minimum -37.368 dB.",
+  "Width at half contrast 0.3089 nm, Q = 5017, free spectral range 9.104 nm."
+ ],
+ "ports": [
+  "in",
+  "through",
+  "drop",
+  "add"
+ ],
+ "excite": "in",
+ "components": 4,
+ "component_ports": 12,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 0.02674904,
+ "reciprocity_defect": 4.440892e-16,
+ "max_power": 0.999923857813,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.012378,
+   "min_db": -37.330846,
+   "center_db": -0.02,
+   "dips": 4.0,
+   "dips_fsr_nm": 9.082003,
+   "dips_lambda_um": 1.55262686,
+   "dips_fwhm_nm": 0.309996,
+   "dips_q": 5008.5,
+   "peaks": 3.0,
+   "peaks_fsr_nm": 9.081727,
+   "peaks_lambda_um": 1.54807262,
+   "peaks_fwhm_nm": 8.773313,
+   "peaks_q": 176.5
+  },
+  "drop": {
+   "max_db": -0.118577,
+   "min_db": -25.575405,
+   "center_db": -23.495322,
+   "dips": 4.0,
+   "dips_fsr_nm": 9.135635,
+   "dips_lambda_um": 1.54807262,
+   "dips_fwhm_nm": 8.773313,
+   "dips_q": 176.5,
+   "peaks": 4.0,
+   "peaks_fsr_nm": 9.082118,
+   "peaks_lambda_um": 1.55262669,
+   "peaks_fwhm_nm": 0.309996,
+   "peaks_q": 5008.5
+  },
+  "add": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.999923858"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 4.44e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "below add -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  },
+  {
+   "check": "max drop -0.1186 0.03",
+   "status": "PASS",
+   "detail": "-0.1186 dB, expected -0.1186, off by 2.33e-05"
+  },
+  {
+   "check": "min through -37.3682 0.1",
+   "status": "PASS",
+   "detail": "-37.3308 dB, expected -37.3682, off by 3.74e-02"
+  },
+  {
+   "check": "fwhm drop peaks 0.308931 0.01",
+   "status": "PASS",
+   "detail": "0.31000 nm, expected 0.30893, relative error 3.45e-03"
+  },
+  {
+   "check": "fsr drop peaks 9.10404 0.005",
+   "status": "PASS",
+   "detail": "9.08212 nm, expected 9.10404, relative error -2.41e-03"
+  }
+ ]
+}
