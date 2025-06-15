@@ -1,0 +1,91 @@
+{
+ "case": "ring_adddrop_weak",
+ "title": "Add-drop ring, radius 10 um, coupling 0.02 / 0.02",
+ "notes": [
+  "Drop peak k1^2 k2^2 a / (1 - t1 t2 a)^2 = -0.601 dB, through minimum -23.501 dB.",
+  "Width at half contrast 0.0627 nm, Q = 24708, free spectral range 9.104 nm."
+ ],
+ "ports": [
+  "in",
+  "through",
+  "drop",
+  "add"
+ ],
+ "excite": "in",
+ "components": 4,
+ "component_ports": 12,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 0.1247214,
+ "reciprocity_defect": 3.330669e-16,
+ "max_power": 0.999985386403,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.000507,
+   "min_db": -23.466433,
+   "center_db": -0.000819,
+   "dips": 1.0,
+   "dips_lambda_um": 1.55262669,
+   "dips_fwhm_nm": 0.06295,
+   "dips_q": 24664.4,
+   "peaks": 0.0
+  },
+  "drop": {
+   "max_db": -0.60093,
+   "min_db": -39.91277,
+   "center_db": -37.825377,
+   "dips": 1.0,
+   "dips_lambda_um": 1.54807262,
+   "peaks": 1.0,
+   "peaks_lambda_um": 1.55262669,
+   "peaks_fwhm_nm": 0.06295,
+   "peaks_q": 24664.4
+  },
+  "add": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.999985386"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 3.33e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "below add -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  },
+  {
+   "check": "max drop -0.6008 0.03",
+   "status": "PASS",
+   "detail": "-0.6009 dB, expected -0.6008, off by -1.30e-04"
+  },
+  {
+   "check": "min through -23.5012 0.1",
+   "status": "PASS",
+   "detail": "-23.4664 dB, expected -23.5012, off by 3.48e-02"
+  },
+  {
+   "check": "fwhm drop peaks 0.062733 0.01",
+   "status": "PASS",
+   "detail": "0.06295 nm, expected 0.06273, relative error 3.46e-03"
+  }
+ ]
+}
