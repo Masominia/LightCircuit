@@ -1,0 +1,51 @@
+{
+ "case": "ring_allpass_linewidth",
+ "title": "All-pass ring: linewidth and quality factor",
+ "notes": [
+  "Width at half contrast of the Airy line with round-trip coefficient t a: 0.08060 nm, Q = 19231.",
+  "For a sharp resonance this tends to lambda^2 (1 - t a) / (pi ng L sqrt(t a))."
+ ],
+ "ports": [
+  "in",
+  "through"
+ ],
+ "excite": "in",
+ "components": 2,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 0.2877227,
+ "reciprocity_defect": 0.0,
+ "max_power": 0.999944347926,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.000242,
+   "min_db": -1.473509,
+   "center_db": -0.000391,
+   "dips": 1.0,
+   "dips_lambda_um": 1.55262669,
+   "dips_fwhm_nm": 0.080876,
+   "dips_q": 19197.5,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.999944348"
+  },
+  {
+   "check": "fwhm through dips 0.080600 0.01",
+   "status": "PASS",
+   "detail": "0.08088 nm, expected 0.08060, relative error 3.43e-03"
+  }
+ ]
+}
