@@ -1,0 +1,47 @@
+{
+ "case": "ring_allpass_lossless",
+ "title": "All-pass ring without loss",
+ "notes": [
+  "With no loss the ring is a pure phase filter: flat amplitude, all the structure is in the delay."
+ ],
+ "ports": [
+  "in",
+  "through"
+ ],
+ "excite": "in",
+ "components": 2,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 4001,
+ "unitarity_defect": 7.660539e-15,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": 0.0,
+   "min_db": -0.0,
+   "center_db": -0.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless 1e-8",
+   "status": "PASS",
+   "detail": "defect 7.66e-15, tolerance 1.0e-08"
+  },
+  {
+   "check": "extinction through 0 1e-7",
+   "status": "PASS",
+   "detail": "0.000 dB, expected 0.000"
+  }
+ ]
+}
