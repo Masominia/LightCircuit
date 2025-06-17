@@ -1,0 +1,60 @@
+{
+ "case": "ring_allpass_critical",
+ "title": "All-pass ring at critical coupling",
+ "notes": [
+  "When the coupler transmission equals the round-trip amplitude (kappa = 0.01436) the resonance goes to zero."
+ ],
+ "ports": [
+  "in",
+  "through"
+ ],
+ "excite": "in",
+ "components": 2,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 0.999866,
+ "reciprocity_defect": 0.0,
+ "max_power": 0.999947674188,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.000227,
+   "min_db": -38.72958,
+   "center_db": -0.000241,
+   "dips": 4.0,
+   "dips_fsr_nm": 4.554158,
+   "dips_lambda_um": 1.54807253,
+   "dips_fwhm_nm": 0.020946,
+   "dips_q": 73906.1,
+   "peaks": 3.0,
+   "peaks_fsr_nm": 4.554094,
+   "peaks_lambda_um": 1.55034631,
+   "peaks_fwhm_nm": 4.533067,
+   "peaks_q": 342.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.999947674"
+  },
+  {
+   "check": "deeper through -30",
+   "status": "PASS",
+   "detail": "minimum -38.730 dB, required below -30.000"
+  },
+  {
+   "check": "fsr through dips 4.55202 0.005",
+   "status": "PASS",
+   "detail": "4.55416 nm, expected 4.55202, relative error 4.70e-04"
+  }
+ ]
+}
