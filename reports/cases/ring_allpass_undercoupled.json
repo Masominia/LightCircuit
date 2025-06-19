@@ -1,0 +1,61 @@
+{
+ "case": "ring_allpass_undercoupled",
+ "title": "All-pass ring, under-coupled",
+ "notes": [
+  "Round-trip amplitude a = 0.99279, coupler transmission t = 0.99760.",
+  "On resonance the transmission is ((t - a) / (1 - t a))^2 = -5.989 dB."
+ ],
+ "ports": [
+  "in",
+  "through"
+ ],
+ "excite": "in",
+ "components": 2,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 0.7479644,
+ "reciprocity_defect": 0.0,
+ "max_power": 0.99998264167,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -7.5e-05,
+   "min_db": -5.985382,
+   "center_db": -8e-05,
+   "dips": 4.0,
+   "dips_fsr_nm": 4.554145,
+   "dips_lambda_um": 1.54807261,
+   "dips_fwhm_nm": 0.01398,
+   "dips_q": 110736.9,
+   "peaks": 3.0,
+   "peaks_fsr_nm": 4.554094,
+   "peaks_lambda_um": 1.55034631,
+   "peaks_fwhm_nm": 4.54005,
+   "peaks_q": 341.5
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.999982642"
+  },
+  {
+   "check": "min through -5.9893 0.05",
+   "status": "PASS",
+   "detail": "-5.9854 dB, expected -5.9893, off by 3.92e-03"
+  },
+  {
+   "check": "fsr through dips 4.55202 0.005",
+   "status": "PASS",
+   "detail": "4.55415 nm, expected 4.55202, relative error 4.67e-04"
+  }
+ ]
+}
