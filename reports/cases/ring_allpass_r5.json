@@ -1,0 +1,60 @@
+{
+ "case": "ring_allpass_r5",
+ "title": "All-pass ring, radius 5 um",
+ "notes": [
+  "Circumference 31.416 um, free spectral range lambda^2 / (ng L) = 18.2081 nm."
+ ],
+ "ports": [
+  "in",
+  "through"
+ ],
+ "excite": "in",
+ "components": 2,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 0.1557502,
+ "reciprocity_defect": 0.0,
+ "max_power": 0.999972173567,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.000121,
+   "min_db": -0.73529,
+   "center_db": -0.000149,
+   "dips": 6.0,
+   "dips_fsr_nm": 18.285675,
+   "dips_lambda_um": 1.54354519,
+   "dips_fwhm_nm": 0.153759,
+   "dips_q": 10038.7,
+   "peaks": 5.0,
+   "peaks_fsr_nm": 18.279972,
+   "peaks_lambda_um": 1.55262669,
+   "peaks_fwhm_nm": 18.114889,
+   "peaks_q": 85.7
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 0.999972174"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 0.00e+00, tolerance 1.0e-09"
+  },
+  {
+   "check": "fsr through dips 18.20808 0.005",
+   "status": "PASS",
+   "detail": "18.28568 nm, expected 18.20808, relative error 4.26e-03"
+  }
+ ]
+}
