@@ -1,0 +1,88 @@
+{
+ "case": "ring_loaded_mzi",
+ "title": "Mach-Zehnder with a ring on one arm",
+ "notes": [
+  "The ring adds a sharp phase step to one arm, which the interferometer turns into an asymmetric line."
+ ],
+ "ports": [
+  "in",
+  "in2",
+  "bar",
+  "cross"
+ ],
+ "excite": "in",
+ "components": 7,
+ "component_ports": 20,
+ "open_ports": 0,
+ "points": 16001,
+ "unitarity_defect": 4.135581e-15,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "in2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "bar": {
+   "max_db": -2.8e-05,
+   "min_db": -119.151862,
+   "center_db": -33.687067,
+   "dips": 2.0,
+   "dips_fsr_nm": 9.135001,
+   "dips_lambda_um": 1.54807253,
+   "dips_fwhm_nm": 8.929272,
+   "dips_q": 173.4,
+   "peaks": 2.0,
+   "peaks_fsr_nm": 9.081493,
+   "peaks_lambda_um": 1.55262669,
+   "peaks_fwhm_nm": 0.153118,
+   "peaks_q": 10140.1
+  },
+  "cross": {
+   "max_db": -0.0,
+   "min_db": -51.854263,
+   "center_db": -0.001859,
+   "dips": 2.0,
+   "dips_fsr_nm": 9.081428,
+   "dips_lambda_um": 1.55262648,
+   "dips_fwhm_nm": 0.153118,
+   "dips_q": 10140.1,
+   "peaks": 1.0,
+   "peaks_lambda_um": 1.54807262,
+   "peaks_fwhm_nm": 8.929272,
+   "peaks_q": 173.4
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless 1e-8",
+   "status": "PASS",
+   "detail": "defect 4.14e-15, tolerance 1.0e-08"
+  },
+  {
+   "check": "reciprocal 1e-8",
+   "status": "PASS",
+   "detail": "defect 0.00e+00, tolerance 1.0e-08"
+  },
+  {
+   "check": "deeper bar -20",
+   "status": "PASS",
+   "detail": "minimum -119.152 dB, required below -20.000"
+  },
+  {
+   "check": "max cross 0 0.01",
+   "status": "PASS",
+   "detail": "-0.0000 dB, expected 0.0000, off by -5.28e-12"
+  }
+ ]
+}
