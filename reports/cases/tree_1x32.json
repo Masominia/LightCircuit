@@ -1,0 +1,311 @@
+{
+ "case": "tree_1x32",
+ "title": "1x32 splitter tree",
+ "notes": [
+  "5 levels of Y-branches: every output carries 1/32 of the power, -15.0515 dB.",
+  "This is the feed network of an optical phased array with uniform illumination."
+ ],
+ "ports": [
+  "in",
+  "out1",
+  "out2",
+  "out3",
+  "out4",
+  "out5",
+  "out6",
+  "out7",
+  "out8",
+  "out9",
+  "out10",
+  "out11",
+  "out12",
+  "out13",
+  "out14",
+  "out15",
+  "out16",
+  "out17",
+  "out18",
+  "out19",
+  "out20",
+  "out21",
+  "out22",
+  "out23",
+  "out24",
+  "out25",
+  "out26",
+  "out27",
+  "out28",
+  "out29",
+  "out30",
+  "out31",
+  "out32"
+ ],
+ "excite": "in",
+ "components": 31,
+ "component_ports": 93,
+ "open_ports": 0,
+ "points": 21,
+ "unitarity_defect": 0.96875,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out1": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out2": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out3": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out4": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out5": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out6": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out7": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out8": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out9": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out10": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out11": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out12": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out13": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out14": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out15": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out16": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out17": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out18": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out19": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out20": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out21": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out22": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out23": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out24": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out25": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out26": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out27": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out28": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out29": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out30": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out31": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out32": {
+   "max_db": -15.0515,
+   "min_db": -15.0515,
+   "center_db": -15.0515,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 1.000000000"
+  },
+  {
+   "check": "uniform 1e-9",
+   "status": "PASS",
+   "detail": "outputs between -15.0515 and -15.0515 dB"
+  },
+  {
+   "check": "level out1 1.55 -15.05149978 1e-6",
+   "status": "PASS",
+   "detail": "-15.0515 dB, expected -15.0515, off by -3.20e-09"
+  },
+  {
+   "check": "level out32 1.55 -15.05149978 1e-6",
+   "status": "PASS",
+   "detail": "-15.0515 dB, expected -15.0515, off by -3.20e-09"
+  },
+  {
+   "check": "phase_step 1.55 0 1e-9",
+   "status": "PASS",
+   "detail": "largest deviation 0.0000 degrees from a step of 0.000 over 31 steps"
+  }
+ ]
+}
