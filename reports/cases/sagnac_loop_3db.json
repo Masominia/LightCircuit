@@ -1,0 +1,52 @@
+{
+ "case": "sagnac_loop_3db",
+ "title": "Sagnac loop mirror, coupling 50%",
+ "notes": [
+  "The two counter-propagating waves see the same loop, so the result does not depend on wavelength: reflection 4 kappa (1 - kappa) = 1.00."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 2,
+ "component_ports": 6,
+ "open_ports": 0,
+ "points": 201,
+ "unitarity_defect": 6.661338e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": 0.0,
+   "min_db": 0.0,
+   "center_db": 0.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 6.66e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "level in 1.55 0.00000000 1e-6",
+   "status": "PASS",
+   "detail": "0.0000 dB, expected 0.0000, off by 1.93e-15"
+  },
+  {
+   "check": "below out -200",
+   "status": "PASS",
+   "detail": "maximum -300.0000 dB, bound -200.0000"
+  }
+ ]
+}
