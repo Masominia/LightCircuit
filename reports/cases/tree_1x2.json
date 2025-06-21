@@ -1,0 +1,71 @@
+{
+ "case": "tree_1x2",
+ "title": "1x2 splitter tree",
+ "notes": [
+  "1 levels of Y-branches: every output carries 1/2 of the power, -3.0103 dB.",
+  "This is the feed network of an optical phased array with uniform illumination."
+ ],
+ "ports": [
+  "in",
+  "out1",
+  "out2"
+ ],
+ "excite": "in",
+ "components": 1,
+ "component_ports": 3,
+ "open_ports": 0,
+ "points": 21,
+ "unitarity_defect": 0.5,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out1": {
+   "max_db": -3.0103,
+   "min_db": -3.0103,
+   "center_db": -3.0103,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out2": {
+   "max_db": -3.0103,
+   "min_db": -3.0103,
+   "center_db": -3.0103,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 1.000000000"
+  },
+  {
+   "check": "uniform 1e-9",
+   "status": "PASS",
+   "detail": "outputs between -3.0103 and -3.0103 dB"
+  },
+  {
+   "check": "level out1 1.55 -3.01029996 1e-6",
+   "status": "PASS",
+   "detail": "-3.0103 dB, expected -3.0103, off by 3.36e-09"
+  },
+  {
+   "check": "level out2 1.55 -3.01029996 1e-6",
+   "status": "PASS",
+   "detail": "-3.0103 dB, expected -3.0103, off by 3.36e-09"
+  },
+  {
+   "check": "phase_step 1.55 0 1e-9",
+   "status": "PASS",
+   "detail": "largest deviation 0.0000 degrees from a step of 0.000 over 1 steps"
+  }
+ ]
+}
