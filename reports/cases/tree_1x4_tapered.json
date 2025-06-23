@@ -1,0 +1,87 @@
+{
+ "case": "tree_1x4_tapered",
+ "title": "1x4 tree with uneven first split",
+ "notes": [
+  "A 70/30 first split followed by even splits: 35, 35, 15 and 15 percent.",
+  "Uneven splits are how an array gets a tapered illumination and lower side lobes."
+ ],
+ "ports": [
+  "in",
+  "out1",
+  "out2",
+  "out3",
+  "out4"
+ ],
+ "excite": "in",
+ "components": 3,
+ "component_ports": 9,
+ "open_ports": 0,
+ "points": 21,
+ "unitarity_defect": 0.85,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out1": {
+   "max_db": -4.55932,
+   "min_db": -4.55932,
+   "center_db": -4.55932,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out2": {
+   "max_db": -4.55932,
+   "min_db": -4.55932,
+   "center_db": -4.55932,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out3": {
+   "max_db": -8.239087,
+   "min_db": -8.239087,
+   "center_db": -8.239087,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out4": {
+   "max_db": -8.239087,
+   "min_db": -8.239087,
+   "center_db": -8.239087,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "level out1 1.55 -4.55931956 1e-6",
+   "status": "PASS",
+   "detail": "-4.5593 dB, expected -4.5593, off by 3.50e-09"
+  },
+  {
+   "check": "level out2 1.55 -4.55931956 1e-6",
+   "status": "PASS",
+   "detail": "-4.5593 dB, expected -4.5593, off by 3.50e-09"
+  },
+  {
+   "check": "level out3 1.55 -8.23908741 1e-6",
+   "status": "PASS",
+   "detail": "-8.2391 dB, expected -8.2391, off by 5.57e-10"
+  },
+  {
+   "check": "level out4 1.55 -8.23908741 1e-6",
+   "status": "PASS",
+   "detail": "-8.2391 dB, expected -8.2391, off by 5.57e-10"
+  },
+  {
+   "check": "passive",
+   "status": "PASS",
+   "detail": "largest output power 1.000000000"
+  }
+ ]
+}
