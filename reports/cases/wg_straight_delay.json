@@ -1,0 +1,57 @@
+{
+ "case": "wg_straight_delay",
+ "title": "Straight waveguide, 1 mm, lossless",
+ "notes": [
+  "Group delay of a plain waveguide: tau = ng L / c."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 1,
+ "component_ports": 2,
+ "open_ports": 0,
+ "points": 4001,
+ "unitarity_defect": 2.220446e-16,
+ "reciprocity_defect": 0.0,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out": {
+   "max_db": 0.0,
+   "min_db": -0.0,
+   "center_db": 0.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless",
+   "status": "PASS",
+   "detail": "defect 2.22e-16, tolerance 1.0e-09"
+  },
+  {
+   "check": "reciprocal",
+   "status": "PASS",
+   "detail": "defect 0.00e+00, tolerance 1.0e-09"
+  },
+  {
+   "check": "level out 1.55 0 1e-9",
+   "status": "PASS",
+   "detail": "0.0000 dB, expected 0.0000, off by 0.00e+00"
+  },
+  {
+   "check": "delay out 1.55 14.009692 1e-5",
+   "status": "PASS",
+   "detail": "14.00969 ps, expected 14.00969, relative error -8.28e-11"
+  }
+ ]
+}
