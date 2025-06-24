@@ -1,0 +1,108 @@
+{
+ "case": "vernier_cascade",
+ "title": "Vernier filter: two rings of 10 and 11 um in cascade",
+ "notes": [
+  "Each ring passes its own comb (9.10 and 8.28 nm). Both line up only every lambda^2 / (ng (L2 - L1)) = 91.0 nm."
+ ],
+ "ports": [
+  "in",
+  "through",
+  "out",
+  "through2",
+  "add2",
+  "add1"
+ ],
+ "excite": "in",
+ "components": 9,
+ "component_ports": 26,
+ "open_ports": 0,
+ "points": 40001,
+ "unitarity_defect": 8.437695e-15,
+ "reciprocity_defect": 6.206335e-16,
+ "max_power": 1.0,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "through": {
+   "max_db": -0.012047,
+   "min_db": -57.880867,
+   "center_db": -0.019466,
+   "dips": 23.0,
+   "dips_fsr_nm": 9.065904,
+   "dips_lambda_um": 1.55262585,
+   "dips_fwhm_nm": 0.305853,
+   "dips_q": 5076.4,
+   "peaks": 22.0,
+   "peaks_fsr_nm": 9.062557,
+   "peaks_lambda_um": 1.54807262,
+   "peaks_fwhm_nm": 8.777449,
+   "peaks_q": 176.4
+  },
+  "out": {
+   "max_db": -0.00166,
+   "min_db": -51.101745,
+   "center_db": -26.517864,
+   "dips": 44.0,
+   "dips_fsr_nm": 4.526486,
+   "dips_lambda_um": 1.55137559,
+   "dips_fwhm_nm": 2.203953,
+   "dips_q": 703.9,
+   "peaks": 45.0,
+   "peaks_fsr_nm": 4.533351,
+   "peaks_lambda_um": 1.55014511,
+   "peaks_fwhm_nm": 0.279935,
+   "peaks_q": 5537.5
+  },
+  "through2": {
+   "max_db": -0.012198,
+   "min_db": -78.424851,
+   "center_db": -26.492341,
+   "dips": 33.0,
+   "dips_fsr_nm": 6.020062,
+   "dips_lambda_um": 1.55013983,
+   "dips_fwhm_nm": 8.777029,
+   "dips_q": 176.6,
+   "peaks": 34.0,
+   "peaks_fsr_nm": 6.043916,
+   "peaks_lambda_um": 1.55262671,
+   "peaks_fwhm_nm": 0.306691,
+   "peaks_q": 5062.5
+  },
+  "add2": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "add1": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "lossless 1e-7",
+   "status": "PASS",
+   "detail": "defect 8.44e-15, tolerance 1.0e-07"
+  },
+  {
+   "check": "below out 0.0001",
+   "status": "PASS",
+   "detail": "maximum -0.0017 dB, bound 0.0001"
+  },
+  {
+   "check": "max out 0 0.3",
+   "status": "PASS",
+   "detail": "-0.0017 dB, expected 0.0000, off by -1.66e-03"
+  }
+ ]
+}
