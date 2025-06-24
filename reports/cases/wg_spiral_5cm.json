@@ -1,0 +1,47 @@
+{
+ "case": "wg_spiral_5cm",
+ "title": "Spiral delay line, 5 cm at 1.5 dB/cm",
+ "notes": [
+  "A long delay line: 7.5 dB of loss and ng L / c of delay."
+ ],
+ "ports": [
+  "in",
+  "out"
+ ],
+ "excite": "in",
+ "components": 1,
+ "component_ports": 2,
+ "open_ports": 0,
+ "points": 2001,
+ "unitarity_defect": 0.8221721,
+ "reciprocity_defect": 0.0,
+ "max_power": 0.177827941004,
+ "metrics": {
+  "in": {
+   "max_db": -300.0,
+   "min_db": -300.0,
+   "center_db": -300.0,
+   "dips": 0.0,
+   "peaks": 0.0
+  },
+  "out": {
+   "max_db": -7.5,
+   "min_db": -7.5,
+   "center_db": -7.5,
+   "dips": 0.0,
+   "peaks": 0.0
+  }
+ },
+ "checks": [
+  {
+   "check": "level out 1.55 -7.5 1e-9",
+   "status": "PASS",
+   "detail": "-7.5000 dB, expected -7.5000, off by 0.00e+00"
+  },
+  {
+   "check": "delay out 1.55 700.48460 1e-4",
+   "status": "PASS",
+   "detail": "700.48460 ps, expected 700.48460, relative error -1.00e-09"
+  }
+ ]
+}
